@@ -51,10 +51,19 @@
         </ul>
     </div>
 
-    <div class="courses grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-6 py-4">
-        {{-- <livewire:course-card> --}}
+    <div>
+        <div wire:loading>
+            loading..
+        </div>
+        <div class="courses grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-6 py-4" wire:loading.remove>
+            @if (count($courses) == 0)
+                <p>no data</p>
+            @else
+                @foreach ($courses as $course)
+                    <livewire:course-card :course="$course">
+                @endforeach
+            @endif
+        </div>
     </div>
-
-
 
 </section>

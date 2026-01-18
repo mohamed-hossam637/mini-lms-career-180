@@ -16,7 +16,7 @@ class CoursesSection extends Component
     public function getCourses(Category $category)
     {
         $this->current_category = $category->id ;
-        $this->courses = $category->courses;
+        $this->courses = $category->courses()->with(['level'])->get();
     }
 
     public function getCategories() {
