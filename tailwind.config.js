@@ -23,11 +23,12 @@ export default {
             },
             borderRadius: {
                 'btn-radius': '12px',
-                'card-radius': '20px',
+                'card': '20px',
             },
             padding: {
                 'btn-padding': '12px',
-                'container-padding' : '60px 80px'
+                'container-padding' : '60px 80px' ,
+                'card' : '8px 8px 16px 8px'
             },
             backgroundImage: {
                 slider: "url('/assets/slider.png')",

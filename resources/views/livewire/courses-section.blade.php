@@ -10,19 +10,51 @@
                 and vacancies
             </p>
         </div>
-        <div class="" >
-            <a href="/" class="inline-block border border-secondary-color  text-secondary-color p-btn-padding rounded-btn-radius bg-white">
+        <div class="">
+            <a href="/"
+                class="inline-block border border-secondary-color  text-secondary-color p-btn-padding rounded-btn-radius bg-white">
                 Explore All courses
             </a>
         </div>
     </div>
 
-    <ul class="categories flex items-center gap-3 pt-5 overflow-x-auto scroll">
-        @foreach ($categories as  $category )
-            <li wire:key="{{ $category->id }}" @class([ "rounded-btn-radius p-btn-padding bg-white text-main-text-color text-nowrap cursor-pointer hover:bg-main-color hover:text-white transition-all ease-in-out" , '!bg-main-color text-white' => $loop->first])>
-                {{ $category->title }}
-            </li>
-        @endforeach
-    </ul>
+    <div wire:init="getCategories">
+
+        {{-- loading skeleton --}}
+
+        <div wire:loading wire:target="getCategories">
+            <ul class="categories flex flex-row gap-3 pt-5 overflow-x-auto scroll animate-pulse">
+                <li class="bg-secondary-text-color w-40  h-10 rounded-btn-radius"></li>
+                <li class="bg-secondary-text-color w-40 h-10 rounded-btn-radius"></li>
+                <li class="bg-secondary-text-color w-40 h-10 rounded-btn-radius"></li>
+                <li class="bg-secondary-text-color w-40 h-10 rounded-btn-radius"></li>
+                <li class="bg-secondary-text-color w-40 h-10 rounded-btn-radius"></li>
+                <li class="bg-secondary-text-color w-40 h-10 rounded-btn-radius"></li>
+                <li class="bg-secondary-text-color w-40 h-10 rounded-btn-radius"></li>
+            </ul>
+        </div>
+
+        {{-- categories --}}
+
+        <ul class="categories flex items-center gap-3 pt-5 overflow-x-auto scroll" wire:loading.remove
+            wire:target="getCategories">
+            @foreach ($categories as $category)
+                <li wire:key="{{ $category->id }}" @class([
+                    'rounded-btn-radius p-btn-padding bg-white text-main-text-color text-nowrap cursor-pointer hover:bg-main-color hover:text-white transition-all ease-in-out',
+                    '!bg-main-color text-white' =>
+                        $loop->first || $current_category == $category->id,
+                ])
+                    wire:click="getCourses({{ $category->id }})">
+                    {{ $category->title }}
+                </li>
+            @endforeach
+        </ul>
+    </div>
+
+    <div class="courses grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-6 py-4">
+        {{-- <livewire:course-card> --}}
+    </div>
+
+
 
 </section>
