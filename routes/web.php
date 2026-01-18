@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Livewire\CourseDetails;
 use App\Livewire\Home;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', Home::class);
+Route::get('/course-details/{course}', CourseDetails::class)->name('course.details');
 
 
 
