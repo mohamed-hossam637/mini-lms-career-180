@@ -14,6 +14,18 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'main-color': 'rgba(61, 87, 168, 1)',
+                'secondary-color': 'rgba(201, 13, 137, 1)',
+                'main-text-color' : 'rgba(34, 34, 34, 1)'
+            },
+            borderRadius: {
+                'btn-radius': '12px',
+                'card-radius': '20px',
+            },
+            padding: {
+                'btn-padding': '12px',
+            }
         },
     },
 
