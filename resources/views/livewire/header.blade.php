@@ -1,4 +1,4 @@
-<header class="text-2xl px-[80px] py-[10px] bg-white flex justify-between items-center">
+<header class="text-2xl px-[80px] py-[10px] bg-white flex justify-between items-center sticky top-0 bg-white z-50">
     <div class="logo">
         <img src="{{ asset('assets/logo.svg') }}" alt="career180 logo">
     </div>

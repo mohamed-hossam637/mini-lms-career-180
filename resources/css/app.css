@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 
-:root {
-    --main-color: rgba(61, 87, 168, 1) ;
-    --secondary-color: rgba(201, 13, 137, 1) ;
-    --btn-radius: 12px ;
-    --btn-padding: 12px ;
-    --card-radius: 20px;
+.scroll::-webkit-scrollbar {
+    height: 3px;
 }
