@@ -19,7 +19,8 @@ export default {
                 'secondary-color': 'rgba(201, 13, 137, 1)',
                 'main-text-color': 'rgba(34, 34, 34, 1)',
                 'secondary-text-color' : 'rgba(34, 34, 34, 0.6)',
-                'section-bg' : 'rgba(243, 243, 243, 1)'
+                'section-bg' : 'rgba(243, 243, 243, 1)' ,
+                'footer' : 'rgba(27, 45, 100, 1)'
             },
             borderRadius: {
                 'btn-radius': '12px',

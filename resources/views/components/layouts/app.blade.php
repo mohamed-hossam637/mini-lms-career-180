@@ -20,6 +20,7 @@
         <main>
             {{ $slot }}
         </main>
+        <livewire:footer></livewire:footer>
 
         <script>
             new Splide( '.splide' , {
