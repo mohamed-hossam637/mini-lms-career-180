@@ -1,5 +1,5 @@
 <header 
-class="text-2xl px-10 md:px-[80px] py-[10px] bg-white flex justify-between items-center sticky top-0 bg-white z-[300]">
+class="text-2xl px-10 md:px-[80px] py-[10px] bg-white flex justify-between items-center sticky top-0 z-[300] border-b border-gray-100">
     <a class="logo block" href="{{ route('home') }}">
         <img src="{{ asset('assets/logo.svg') }}" alt="career180 logo">
     </a>

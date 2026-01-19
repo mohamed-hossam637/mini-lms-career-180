@@ -25,7 +25,7 @@
     <section class="container p-4 md:p-container-padding bg-gray-100">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {{-- About Career 180 Column --}}
-            <div class="flex flex-col items-center md:items-start border-main-color md:pr-4 pr-0">
+            <div class="flex flex-col items-center pr-4 md:items-start border-main-color md:border-r-2 border-r-0">
                 <div class="bg-secondary-color rounded-lg p-4 mb-4">
                     <img src="{{ asset('assets/180.svg') }}" alt="">
                 </div>
@@ -40,7 +40,7 @@
             </div>
 
             {{-- Our Mission Column --}}
-            <div class="flex flex-col items-center md:items-start border-main-color md:pr-4 pr-0">
+            <div class="flex flex-col items-center md:items-start border-main-color md:pr-4 pr-0 md:border-r-2 border-r-0">
                 <div class="bg-secondary-color rounded-lg p-4 mb-4">
                     <img src="{{ asset('assets/target-arrow.svg') }}" alt="">
                 </div>
