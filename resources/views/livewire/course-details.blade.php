@@ -102,15 +102,22 @@
                             <p class="text-main-text-color text-sm  mb-2">
                                 {{ $lesson->title }}
                             </p>
-                            <div class="flex items-center gap-2">
-                                <span class="me-2">
-                                    <img src="{{ asset('assets/clock-hour.svg') }}" alt="">
-                                </span>
-                                <span class="text-secondary-text-color text-sm">
-                                    {{ ceil($lesson->duration_in_seconds / 60) }} minutes
-                                </span>
-                            </div>
 
+                            <div class="flex items-center gap-10">
+                                <a href="{{ route('lesson.page', [$course->id, $lesson->id]) }}"
+                                    class="text-main-color text-sm  mb-2 underline font-bold">
+                                    Preview
+                                </a>
+
+                                <div class="flex items-center gap-2">
+                                    <span class="me-2">
+                                        <img src="{{ asset('assets/clock-hour.svg') }}" alt="">
+                                    </span>
+                                    <span class="text-secondary-text-color text-sm">
+                                        {{ ceil($lesson->duration_in_seconds / 60) }} minutes
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     @endforeach
                 </div>

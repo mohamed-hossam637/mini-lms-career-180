@@ -3,11 +3,13 @@
 use App\Http\Controllers\ProfileController;
 use App\Livewire\CourseDetails;
 use App\Livewire\Home;
+use App\Livewire\LessonPage;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', Home::class)->name('home');
 Route::get('/course-details/{course}', CourseDetails::class)->name('course.details');
+Route::get('/lesson/{course}/{lesson}', LessonPage::class)->name('lesson.page');
 
 
 
