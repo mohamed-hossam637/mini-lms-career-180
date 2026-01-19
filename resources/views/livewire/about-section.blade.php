@@ -77,7 +77,7 @@
             <h3 class="font-bold text-main-color text-xl">Career 180</h3>
             <h4 class=" text-main-text-color text-5xl font-bold">Invest in your career</h4>
         </div>
-        <div class="mt-10">
+        <div class="mt-10 bg-cover bg-center bg-no-repeat p-10" style="background-image: url({{ asset('assets/invest-section.png') }})">
             <iframe class="w-full h-[500px] rounded-lg" width="560" height="315" src="https://www.youtube.com/embed/obCH5N0mYIA?si=7UhnAWHUalNyltK9"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -200,4 +200,10 @@
             </div>
         </div>
     </div>
+
+    {{-- related courses section --}}
+    <livewire:related-courses :courses="$relatedCourses"></livewire:related-courses>
+
+    {{-- subscriptions section --}}
+    <livewire:subscriptions></livewire:subscriptions>
 </div>

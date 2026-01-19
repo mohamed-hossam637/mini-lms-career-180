@@ -14,12 +14,20 @@ class CourseDetails extends Component
 
     public $instructor;
 
+    public $relatedCourses = [];
+
 
     public function mount(Course $course)
     {
         $this->course = $course;
         $this->lessons = $course->lessons()->get();
         $this->instructor = $course->instructor;
+        $this->getRelatedCourses();
+    }
+
+    public function getRelatedCourses()
+    {
+        $this->relatedCourses = Course::where('category_id', $this->course->category_id)->where('id', '!=', $this->course->id)->get();
     }
 
     

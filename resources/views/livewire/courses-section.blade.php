@@ -52,12 +52,16 @@
     </div>
 
     <div>
-        <div wire:loading>
-            loading..
+        <div class="w-full" wire:loading>
+            <div class="courses grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-6 py-4 w-full">
+                <livewire:lazy-card></livewire:lazy-card>
+                <livewire:lazy-card></livewire:lazy-card>
+                <livewire:lazy-card></livewire:lazy-card>
+            </div>
         </div>
         <div class="courses grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-6 py-4" wire:loading.remove>
             @if (count($courses) == 0)
-                <p>no data</p>
+                <p>no data in this category </p>
             @else
                 @foreach ($courses as $course)
                     <livewire:course-card :course="$course">
@@ -65,5 +69,9 @@
             @endif
         </div>
     </div>
+
+    {{-- <div class="courses grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-6 py-4">
+        <livewire:lazy-card></livewire:lazy-card>
+    </div> --}}
 
 </section>
