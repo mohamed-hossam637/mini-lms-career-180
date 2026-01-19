@@ -29,8 +29,6 @@
                 <li class="bg-secondary-text-color w-40 h-10 rounded-btn-radius"></li>
                 <li class="bg-secondary-text-color w-40 h-10 rounded-btn-radius"></li>
                 <li class="bg-secondary-text-color w-40 h-10 rounded-btn-radius"></li>
-                <li class="bg-secondary-text-color w-40 h-10 rounded-btn-radius"></li>
-                <li class="bg-secondary-text-color w-40 h-10 rounded-btn-radius"></li>
             </ul>
         </div>
 
@@ -41,8 +39,7 @@
             @foreach ($categories as $category)
                 <li wire:key="{{ $category->id }}" @class([
                     'rounded-btn-radius p-btn-padding bg-white text-main-text-color text-nowrap cursor-pointer hover:bg-main-color hover:text-white transition-all ease-in-out',
-                    '!bg-main-color text-white' =>
-                        $loop->first || $current_category == $category->id,
+                    '!bg-main-color text-white' => $current_category === $category->id,
                 ])
                     wire:click="getCourses({{ $category->id }})">
                     {{ $category->title }}
