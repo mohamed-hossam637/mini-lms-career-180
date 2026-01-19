@@ -1,6 +1,6 @@
-<section class="container p-container-padding bg-section-bg">
+<section class="container p-4 md:p-container-padding bg-section-bg">
 
-    <div class="section-header flex justify-between align-start">
+    <div class="section-header flex flex-col md:flex-row justify-between align-start">
         <div class="title-description">
             <h2 class="text-section-title font-bold text-main-color">
                 Courses
@@ -10,7 +10,7 @@
                 and vacancies
             </p>
         </div>
-        <div class="">
+        <div class="mt-4 md:mt-0">
             <a href="/"
                 class="inline-block border border-secondary-color  text-secondary-color p-btn-padding rounded-btn-radius bg-white">
                 Explore All courses

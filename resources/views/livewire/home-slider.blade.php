@@ -5,12 +5,12 @@
             <li class="splide__slide">
                 <div class="h-full w-full bg-main-color bg-cover bg-center mix-blend-luminosity"
                     style="background-image: url({{ asset('assets/slider_1.png') }})">
-                    <div class="container p-container-padding h-full flex items-center">
-                        <div class="w-1/2">
-                            <h1 class="text-5xl font-bold text-white mb-4">
+                    <div class="container p-4 md:p-container-padding h-full flex items-center">
+                        <div class="w-full md:w-1/2">
+                            <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">
                                 Build Your Career with Egypt’s Leading Learning & Job Platform
                             </h1>
-                            <p class="text-white text-2xl">
+                            <p class="text-white text-xl md:text-2xl">
                                 Courses, Events, Internships & Jobs — All in One Place .
                             </p>
                             <div class="mt-10 flex items-center gap-2">

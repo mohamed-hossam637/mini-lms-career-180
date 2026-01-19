@@ -1,8 +1,8 @@
-<section class="container p-container-padding bg-section-bg">
+<section class="container pt-10 p-4 md:p-container-padding bg-section-bg">
 
     <div class="section-header flex justify-between align-start">
         <div class="title-description">
-            <h2 class="text-section-title font-bold text-main-color">
+            <h2 class="text-section-title font-bold text-main-color text-xl md:text-3xl">
                 Related Courses
             </h2>
         </div>

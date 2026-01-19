@@ -1,9 +1,9 @@
-<header class="text-2xl px-[80px] py-[10px] bg-white flex justify-between items-center sticky top-0 bg-white z-50">
+<header class="text-2xl px-10 md:px-[80px] py-[10px] bg-white flex justify-between items-center sticky top-0 bg-white z-50">
     <a class="logo block" href="{{ route('home') }}">
         <img src="{{ asset('assets/logo.svg') }}" alt="career180 logo">
     </a>
 
-    <div class="links">
+    <div class="links hidden md:block">
         <ul class="flex items-center gap-[16px]">
             <li class="text-[18px] text-main-text-color font-medium">
                 Learning Path
@@ -17,7 +17,7 @@
         </ul>
     </div>
 
-    <div class="auth-btns">
+    <div class="auth-btns hidden md:block">
         <a href="{{ route('login') }}"
             class="inline-block p-btn-padding rounded-btn-radius text-secondary-color text-[18px] border border-secondary-color me-3 w-[100px] text-center">
             Log in

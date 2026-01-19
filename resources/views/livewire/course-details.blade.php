@@ -1,11 +1,11 @@
 <div>
     {{-- hero section --}}
-    <div class="main-slider-container h-[60vh] bg-main-color bg-cover bg-center mix-blend-luminosity"
+    <div class="main-slider-container h-auto md:h-[60vh] bg-main-color bg-cover bg-center mix-blend-luminosity"
         style="background-image: url({{ asset('assets/slider.png') }})">
 
-        <div class="container p-container-padding h-full flex items-center">
-            <div class="flex flex-col gap-4 h-full w-6/12">
-                <h1 class="text-4xl font-bold text-white">{{ $course->title }}</h1>
+        <div class="container p-4 md:p-container-padding h-full flex items-center">
+            <div class="flex flex-col gap-4 h-full w-full md:w-6/12">
+                <h1 class="text-3xl md:text-4xl font-bold text-white">{{ $course->title }}</h1>
                 <p class="text-white">{{ $course->description }}</p>
             </div>
         </div>
@@ -13,13 +13,13 @@
     </div>
 
     {{-- course details section --}}
-    <div class="container p-container-padding grid grid-cols-3 gap-4">
+    <div class="container p-4 md:p-container-padding grid grid-cols-1 md:grid-cols-3 gap-4">
         {{-- course details --}}
-        <div class="col-span-2">
+        <div class="md:col-span-2">
             {{-- who takes this course --}}
             <div x-data="{ expanded: true }">
-                <div class="rounded-lg px-[50px] pt-[30px] border border-gray-100 mb-5">
-                    <div class="flex flex-row items-center justify-between cursor-pointer pb-5 text-main-color text-3xl font-bold "
+                <div class="rounded-lg px-4 md:px-[50px] pt-[30px] border border-gray-100 mb-5">
+                    <div class="flex flex-row items-center justify-between cursor-pointer pb-5 text-main-color text-2xl md:text-3xl font-bold "
                         @click="expanded = ! expanded" x-bind:class="{ 'border-b border-gray-100': expanded }">
                         Who takes this course
                         <div class=" flex items-center justify-center">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
 
-                <div class="rounded-lg p-5 border border-gray-100 mb-5 grid grid-cols-2 gap-4" x-show="expanded"
+                <div class="rounded-lg p-5 border border-gray-100 mb-5 grid grid-cols-1 md:grid-cols-2 gap-4" x-show="expanded"
                     x-collapse.duration.500ms>
                     @foreach ($course->who_takes_this_course as $index => $item)
                         <div class="flex items-center gap-4 bg-gray-100 p-2 rounded-lg">
@@ -51,8 +51,8 @@
 
             {{-- course content --}}
             <div x-data="{ expanded: true }" wire:init="lessons">
-                <div class="rounded-lg px-[50px] pt-[30px] border border-gray-100 mb-5">
-                    <div class="flex flex-row items-center justify-between cursor-pointer pb-5 text-main-color text-3xl font-bold "
+                <div class="rounded-lg md:px-[50px] px-4 pt-[30px] border border-gray-100 mb-5">
+                    <div class="flex md:flex-row flex-col items-center justify-between cursor-pointer pb-5 text-main-color text-2xl md:text-3xl font-bold "
                         @click="expanded = ! expanded" x-bind:class="{ 'border-b border-gray-100': expanded }">
 
                         <p>Course Content</p>
@@ -127,8 +127,8 @@
 
             <div class="rounded-lg p-10 border border-gray-100 mb-5">
                 <h2 class="text-main-color text-2xl font-bold mb-4">Meet your instructor</h2>
-                <div class='flex flex-row gap-4'>
-                    <div class="instructor-image h-[255px] w-[40%] rounded-lg overflow-hidden">
+                <div class='flex md:flex-row flex-col gap-4'>
+                    <div class="instructor-image h-[255px] md:w-[40%] w-full rounded-lg overflow-hidden">
                         <img src="{{ $instructor->avatar_url }}" alt="instructor image" loading="lazy"
                             class="w-full h-full object-cover">
                     </div>
@@ -151,7 +151,7 @@
         </div>
         {{-- course card --}}
         <div class="col-span-1 course-card">
-            <div class="p-card rounded-card bg-white shadow-lg translate-y-[-60%]">
+            <div class="p-card rounded-card bg-white shadow-lg md:translate-y-[-60%]">
                 <div class="image h-[350px] mb-6">
                     <img src="{{ asset('assets/course-details.png') }}" alt="course name" loading="lazy"
                         class="w-full h-full object-cover">

@@ -1,4 +1,4 @@
-<div class="rounded-lg px-[50px] pt-[30px] border border-gray-100 mb-5" x-data="{ expanded: false }">
+<div class="rounded-lg px-4 md:px-[50px] pt-[30px] border border-gray-100 mb-5" x-data="{ expanded: false }">
     <div class="flex flex-row items-center justify-between cursor-pointer pb-5" @click="expanded = ! expanded" x-bind:class="{ 'border-b border-gray-100': expanded }">
         {{ $faq->question }}
         <div class="w-[50px] h-[50px] bg-gray-200 p-btn-padding rounded-lg flex items-center justify-center">

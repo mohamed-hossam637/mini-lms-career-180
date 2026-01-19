@@ -1,4 +1,4 @@
-<div class="container p-container-padding bg-white ">
+<div class="container p-4 md:p-container-padding bg-white ">
     <div class="section-header flex flex-col items-center ">
         <div class="title-description">
             <h2 class="text-section-title font-bold text-main-color text-center">
@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <main class="flex flex-row justify-center  flex-wrap gap-4 mt-10 ">
+    <main class="flex  justify-center flex-col md:flex-row flex-wrap gap-4 mt-10 ">
         <livewire:subscription-plan-card ></livewire:subscription-plan-card>
         <livewire:subscription-plan-card ></livewire:subscription-plan-card>
     </main>
