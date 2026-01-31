@@ -17,7 +17,7 @@ import 'plyr/dist/plyr.css';
 
 window.Alpine = Alpine;
 
-Alpine.start();
+
 
 // spide.js
 
@@ -31,12 +31,34 @@ if (slider) {
 }
 
 // plyr.js
+// create alpine component to control player by alpine
+Alpine.data("videoPlayer", () => ({
+    player: null,
+    video_ended: false,
+    show_completed: false ,
 
-const video = document.querySelector("#player");
-if (video) {
-    const player = new Plyr(video);
+    init() {
+        this.player = new Plyr("#player");
 
-    player.on("ready", () => {
-        console.log("Plyr Ready ✅");
-    });
-}
+        this.player.on('ended', () => {
+            this.video_ended = true;
+            this.show_completed = true;
+        })
+    } ,
+
+    close() {
+        this.show_completed = false;
+    }
+}))
+
+Alpine.start();
+
+
+// const video = document.querySelector("#player");
+// if (video) {
+//     const player = new Plyr(video);
+
+//     player.on("ended", () => {
+//         console.log("video is ended");
+//     });
+// }

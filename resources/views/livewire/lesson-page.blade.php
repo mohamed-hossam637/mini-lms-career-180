@@ -5,13 +5,62 @@
         </h1>
     </div>
     <div class="container p-4 md:p-container-padding py-1">
-        <div class="video w-full h-auto md:h-[600px]">
-            <video id="player" class="w-full h-full" controls>
-                <source src="{{ $lesson->video_url }}" type="video/mp4" />
-            </video>
+        <div x-data="videoPlayer()" x-init="init()">
+            <div class="video w-full h-auto md:h-[600px]">
+                <video id="player" class="w-full h-full" controls>
+                    <source src="{{ $lesson->video_url }}" type="video/mp4" />
+                </video>
+            </div>
+
+            <p class="text-xl font-bold mt-3" x-show="video_ended">you completed this lesson </p>
+
+            {{-- completed modal --}}
+            <div x-show="show_completed" @click="close()"
+                class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-[500] completed-lesson-container-overlay">
+                <div class=" p-5 rounded-lg my-5 bg-white rounded-lg p-5">
+
+                    <div class="flex justify-center w-full mb-3 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 animate-bounce"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path fill="#74C0FC"
+                                d="M256 0a256 256 0 1 0 0 512 256 256 0 1 0 0-512zM374.3 233.7L257.7 391.3 141.3 233.7c-9-12.3-19.7-52 14-74.3 29-18.7 56.4-4.3 70.7 12.3 16.4 18.5 48.1 17.4 63.7 0 14.3-16.6 41.7-31 70.3-12.3 34 22.3 23.3 61.9 14.2 74.3z" />
+                        </svg>
+                    </div>
+                    <p class="text-xl font-bold">Good job! you completed this lesson <br> keep going </p>
+
+                    {{-- prev/next lesson --}}
+                    <div class="flex flex-row gap-10 mt-10">
+                        @if ($prev_lesson)
+                            <a href="{{ route('lesson.page', [$course->id, $prev_lesson]) }}"
+                                class="text-main-color text-sm  mb-2 underline font-bold">
+                                Previous Lesson
+                            </a>
+                        @else
+                            <span
+                                class="text-main-color text-sm  mb-2 underline font-bold opacity-50 cursor-not-allowed">
+                                Previous Lesson
+                            </span>
+                        @endif
+
+                        {{-- next lesson --}}
+                        @if ($next_lesson)
+                            <a href="{{ route('lesson.page', [$course->id, $next_lesson]) }}"
+                                class="text-main-color text-sm  mb-2 underline font-bold">
+                                Next Lesson
+                            </a>
+                        @else
+                            <span
+                                class="text-main-color text-sm  mb-2 underline font-bold opacity-50 cursor-not-allowed">
+                                Next Lesson
+                            </span>
+                        @endif
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-
-
 
         {{-- prev/next lesson --}}
         <div class="flex flex-row gap-10 mt-10">
