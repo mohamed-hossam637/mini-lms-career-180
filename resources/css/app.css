@@ -45,3 +45,59 @@
     padding: 10px;
     border-radius: 10px;
 }
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* splide custom arrows  */
+
+.splide__arrows {
+    position: absolute;
+    width: 100%;
+    display: block;
+    padding: 15px;
+    bottom: 0;
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    z-index: 100;
+    padding: 10px 10%;
+}
+
+
+.splide__arrows .splide__arrow,
+.splide__arrows .splide__arrow:disabled {
+    all: unset;
+    padding: 1.2rem 0.9rem;
+    border-radius: 10px;
+    background-color: rgba(232, 234, 240, 1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+}
+
+.splide__arrows .splide__arrow.splide__arrow--prev,
+.splide__arrows .splide__arrow.splide__arrow--prev:disabled {
+    background-color: rgba(232, 234, 240, 1);
+}
+
+.splide__arrows .splide__arrow.splide__arrow--prev svg {
+    transform: rotate(0deg);
+    fill: rgba(201, 13, 137, 1);
+}
+
+.splide__arrows .splide__arrow.splide__arrow--next svg {
+    fill: white;
+}
+
+.splide__arrows .splide__arrow.splide__arrow--next,
+.splide__arrows .splide__arrow.splide__arrow--next:disabled {
+    background-color: rgba(61, 87, 168, 1);
+}

@@ -1,10 +1,10 @@
-<header 
+<header
 class="text-2xl px-10 md:px-[80px] py-[10px] bg-white flex justify-between items-center sticky top-0 z-[300] border-b border-gray-100">
     <a class="logo block" href="{{ route('home') }}">
         <img src="{{ asset('assets/logo.svg') }}" alt="career180 logo">
     </a>
 
-    <div class="links hidden md:block">
+    <div class="links hidden lg:block">
         <ul class="flex items-center gap-[16px]">
             <li class="text-[18px] text-main-text-color font-medium">
                 Learning Path
@@ -18,7 +18,7 @@ class="text-2xl px-10 md:px-[80px] py-[10px] bg-white flex justify-between items
         </ul>
     </div>
 
-    <div class="auth-btns hidden md:block">
+    <div class="auth-btns hidden lg:block">
         <a href="{{ route('login') }}"
             class="inline-block p-btn-padding rounded-btn-radius text-secondary-color text-[18px] border border-secondary-color me-3 w-[100px] text-center">
             Log in
@@ -32,7 +32,7 @@ class="text-2xl px-10 md:px-[80px] py-[10px] bg-white flex justify-between items
         @endif
     </div>
 
-    <div class="mobile-menu block md:hidden" x-data="{ open: false }">
+    <div class="mobile-menu block lg:hidden" x-data="{ open: false }">
         {{-- mobile icon --}}
         <button class="menu-btn w-11 h-11 cursor-pointer p-2" x-on:click="open = !open">
             <svg class="w-full h-full fill-main-color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg>
@@ -62,7 +62,7 @@ class="text-2xl px-10 md:px-[80px] py-[10px] bg-white flex justify-between items
                     class="inline-block p-btn-padding rounded-btn-radius text-secondary-color text-[18px] border border-secondary-color me-3  text-center">
                     Log in
                 </a>
-        
+
                 @if (Route::has('register'))
                     <a href="{{ route('register') }}"
                         class="inline-block p-btn-padding rounded-btn-radius text-[18px] bg-main-color text-white  text-center">
