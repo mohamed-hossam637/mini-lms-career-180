@@ -101,3 +101,10 @@
 .splide__arrows .splide__arrow.splide__arrow--next:disabled {
     background-color: rgba(61, 87, 168, 1);
 }
+
+
+/* plyr.js */
+.plyr {
+    height: 100% !important;
+    width: 100% !important;
+}

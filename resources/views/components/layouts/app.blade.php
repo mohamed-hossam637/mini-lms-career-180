@@ -9,27 +9,17 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        {{-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"> --}}
-
-        @yield('styles')
+        @livewireStyles
     </head>
 
     <body>
         <livewire:Header>
-        <main>
-            {{ $slot }}
-        </main>
-        <livewire:footer></livewire:footer>
+            <main>
+                {{ $slot }}
+            </main>
+            <livewire:footer></livewire:footer>
 
-        {{-- <script>
-            new Splide( '.splide' , {
-                arrows: false,
-                pagination: false,
-            } ).mount();
-        </script> --}}
-
-        @yield('scripts')
+            @livewireScripts
     </body>
 
 </html>

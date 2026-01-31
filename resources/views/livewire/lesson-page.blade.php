@@ -1,11 +1,3 @@
-@section('styles')
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.8.4/plyr.css" />
-@endsection
-
-@section('scripts')
-    <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
-@endsection
-
 <div>
     <div class="page-header p-4 md:p-container-padding py-5 w-full bg-main-color">
         <h1 class="text-xl md:text-section-title font-bold text-white">
@@ -14,7 +6,7 @@
     </div>
     <div class="container p-4 md:p-container-padding py-1">
         <div class="video w-full h-auto md:h-[600px]">
-            <video id="player" class="w-full h-full" playsinline controls data-poster="/path/to/poster.jpg">
+            <video id="player" class="w-full h-full" controls>
                 <source src="{{ $lesson->video_url }}" type="video/mp4" />
             </video>
         </div>
@@ -69,9 +61,9 @@
                     <div class="rounded-lg md:px-[50px] px-4 pt-[30px] border border-gray-100 mb-5">
                         <div class="flex md:flex-row flex-col items-center justify-between cursor-pointer pb-5 text-main-color text-2xl md:text-3xl font-bold "
                             @click="expanded = ! expanded" x-bind:class="{ 'border-b border-gray-100': expanded }">
-    
+
                             <p>Course Content</p>
-    
+
                             <div class="duration flex items-center">
                                 <div class="text-[14px] text-secondary-text-color flex items-center me-3">
                                     <span class="me-2">
@@ -87,7 +79,7 @@
                                     Lectures
                                 </div>
                             </div>
-    
+
                             <div class=" flex items-center justify-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
                                     x-bind:class="{ 'rotate-180': expanded }"
@@ -96,7 +88,7 @@
                                         d="M297.4 470.6C309.9 483.1 330.2 483.1 342.7 470.6L534.7 278.6C547.2 266.1 547.2 245.8 534.7 233.3C522.2 220.8 501.9 220.8 489.4 233.3L320 402.7L150.6 233.4C138.1 220.9 117.8 220.9 105.3 233.4C92.8 245.9 92.8 266.2 105.3 278.7L297.3 470.7z" />
                                 </svg>
                             </div>
-    
+
                         </div>
                     </div>
 
