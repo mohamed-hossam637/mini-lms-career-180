@@ -16,8 +16,8 @@
 
             {{-- completed modal --}}
             <div x-show="show_completed" @click="close()"
-                class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-[500] completed-lesson-container-overlay">
-                <div class=" p-5 rounded-lg my-5 bg-white rounded-lg p-5">
+                class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-[500] completed-lesson-container-overlay px-5">
+                <div class=" p-5 rounded-lg my-5 bg-white rounded-lg p-5 shadow">
 
                     <div class="flex justify-center w-full mb-3 ">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 animate-bounce"
